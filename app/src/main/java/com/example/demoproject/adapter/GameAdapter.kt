@@ -19,6 +19,7 @@ class GameAdapter (private val gameModel: List<GameModel>) : RecyclerView.Adapte
     override fun onBindViewHolder(holder: GameViewHolder, position: Int) {
         holder.binding.apply {
             imgGame.load(gameModel[position].imageUrl)
+            gameName.text = gameModel[position].gameName
         }
     }
 
